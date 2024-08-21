@@ -1,0 +1,28 @@
+env:
+    MANIFEST: https://github.com/AOSPA/manifest -b uvite
+    DEVICE: RMX1901
+    OEM: realme
+    #LOCAL_MANIFEST: https://github.com/Shravan55555/local_manifest.git -b main
+    #TARGET: evolution
+    #LUNCH_COMBO: lineage_${DEVICE}-user
+    OUTPUT: P*.zip
+    #CLO: RMX1901:AppDrive
+    #CLO_1: #ENCRYPTED[!d539ab513a653c9ce419c6f2b5309bdeec2760bf8f92511563a91df3c24c11252989295c8b71b90e5d5ac9395e6b2290!]
+    #URI: #https://sourceforge.net/projects/realme-x-1901/files/ccache/Rise/ccache.tar.gz/download
+    ROM_U: 0
+    
+task:
+  name: "build"
+  timeout_in: 120m
+  container:
+      image: accupara/aosp:ubuntu
+      cpu: 8
+      memory: 32G
+  Storage-Checker_script:
+      - ./scripts/d0wnl0ad
+  Sync_script:
+      - ./scripts/syn0
+  Build_script:
+      - ./scripts/bu1ld
+  upload_script:
+      - ./scripts/upl0ad
