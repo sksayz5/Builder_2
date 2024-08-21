@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/work
+
+./rom-build.sh RMX1901
